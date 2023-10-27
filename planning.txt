@@ -1,0 +1,4 @@
+add smooth animation to buttons and cards
+add react router to navigate
+add single product view details page
+add products page to show different products 
