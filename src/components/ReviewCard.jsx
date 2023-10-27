@@ -5,7 +5,7 @@ import { star } from "../assets/icons";
 const ReviewCard = ({ imgURL, customerName, rating, feedback }) => {
   return (
     <>
-      <div className="flex justify-center items-center flex-col shadow-md p-5 rounded-2xl">
+      <div className="flex justify-center items-center flex-col shadow-md p-5 rounded-2xl hover:shadow-xl transition-shadow">
         <img
           src={imgURL}
           alt="customer"

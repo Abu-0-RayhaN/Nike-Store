@@ -9,9 +9,12 @@ const Nav = () => {
         <a href="/">
           <img src={headerLogo} alt="Logo" width={130} height={29}></img>
         </a>
-        <ul className="flex-1 flex justify-center items-center gap-16 max-lg:hidden">
+        <ul className="flex-1 flex justify-center items-center gap-10 max-lg:hidden">
           {navLinks.map((item) => (
-            <li key={item.label}>
+            <li
+              key={item.label}
+              className=" hover:scale-105 rounded-full hover:bg-red-100 p-4 transition-all dduration-700 ease-in-out"
+            >
               <a
                 href={item.href}
                 className="font-montserrat leading-normal text-lg text-slate-gray"
