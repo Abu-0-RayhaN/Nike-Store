@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { hamburger } from "../assets/icons";
 import { headerLogo } from "../assets/images";
 import { navLinks } from "../constants/index";
+import { BsFillSunFill, BsMoonStarsFill } from "react-icons/bs";
 const Nav = () => {
   const [theme, setTheme] = useState("light");
   useEffect(() => {
@@ -38,23 +39,21 @@ const Nav = () => {
           ))}
         </ul>
         <div>
-          <div
-            className="p-5 rounded-2xl bg-green-600 cursor-pointer"
-            onClick={handleThemeSwitch}
-          >
-            {theme === "dark"
-              ? // <img src={sun} alt="sun image" />
-                "😁"
-              : // <img src={moon} alt="moon image" />
-                "😑"}
+          <div className="flex gap-2">
+            <div
+              className="p-4 lg:p-5 rounded-2xl dark:bg-gray-500 bg-gray-300 dark:lg:bg-slate-200 cursor-pointer"
+              onClick={handleThemeSwitch}
+            >
+              {theme === "dark" ? <BsFillSunFill /> : <BsMoonStarsFill />}
+            </div>
+            <img
+              src={hamburger}
+              alt="hamburger"
+              width={25}
+              height={25}
+              className="hidden max-lg:block"
+            />
           </div>
-          <img
-            src={hamburger}
-            alt="hamburger"
-            width={25}
-            height={25}
-            className="hidden max-lg:block"
-          />
         </div>
       </nav>
     </header>
