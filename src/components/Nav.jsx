@@ -26,11 +26,11 @@ const Nav = () => {
           {navLinks.map((item) => (
             <li
               key={item.label}
-              className="pt-2 dark:bg-slate-800 hover:scale-105 rounded-full hover:bg-red-100 p-4 transition-all dduration-700 ease-in-out"
+              className=" hover:scale-105 rounded-full hover:bg-red-50 p-4 transition-all dduration-700 ease-in-out"
             >
               <a
                 href={item.href}
-                className="font-montserrat leading-normal text-lg text-slate-gray"
+                className="font-montserrat leading-normal text-slate-gray text-xl"
               >
                 {item.label}
               </a>
@@ -42,7 +42,11 @@ const Nav = () => {
             className="p-5 rounded-2xl bg-green-600 cursor-pointer"
             onClick={handleThemeSwitch}
           >
-            DarkMode
+            {theme === "dark"
+              ? // <img src={sun} alt="sun image" />
+                "😁"
+              : // <img src={moon} alt="moon image" />
+                "😑"}
           </div>
           <img
             src={hamburger}

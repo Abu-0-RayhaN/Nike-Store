@@ -18,14 +18,14 @@ const SpecialOffer = () => {
       <div className="flex flex-1 flex-col">
         <h2 className="text-4xl font-palanquin font-bold">
           <span className="text-coral-red">Special </span>
-          Offer
+          <span className="dark:text-gray-200">Offer</span>
         </h2>
-        <p className="mt-4 info-text">
+        <p className="mt-4 info-text dark:text-gray-100">
           Embark on a shopping journey that redefines your experience with
           unbeatable deals. From premier selections to incredible savings, we
           offer unparalleled value that sets us apart.
         </p>
-        <p className="mt-6 info-text">
+        <p className="mt-6 info-text dark:text-gray-100">
           Navigate a realm of possibilities designed to fulfill your unique
           desires, surpassing the loftiest expectations. Your journey with us is
           nothing short of exceptional.
