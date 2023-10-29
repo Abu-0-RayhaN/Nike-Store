@@ -1,11 +1,17 @@
 // import React from 'react'
 import { useEffect, useState } from "react";
-import { hamburger } from "../assets/icons";
 import { headerLogo } from "../assets/images";
 import { navLinks } from "../constants/index";
 import { BsFillSunFill, BsMoonStarsFill } from "react-icons/bs";
+import { ImCross } from "react-icons/im";
+import { GiHamburgerMenu } from "react-icons/gi";
 const Nav = () => {
   const [theme, setTheme] = useState("light");
+  const [isVisible, setIsVisible] = useState(false);
+
+  const handleButtonClick = () => {
+    setIsVisible(!isVisible);
+  };
   useEffect(() => {
     if (theme === "dark") {
       document.documentElement.classList.add("dark");
@@ -19,15 +25,21 @@ const Nav = () => {
 
   return (
     <header className="padding-x py-8 absolute z-10 w-full">
-      <nav className="flex justify-between items-center max-container">
+      <nav className="flex justify-between items-center max-container relative">
         <a href="/">
           <img src={headerLogo} alt="Logo" width={130} height={29}></img>
         </a>
-        <ul className="flex-1 flex justify-center items-center gap-10 max-lg:hidden">
+        <ul
+          className={`flex-1 flex max-lg:flex-col justify-center items-center  ${
+            isVisible
+              ? "block bg-coral-red absolute top-28 left-16 w-[70%] rounded-2xl transition-all duration-1000 gap-10"
+              : "max-lg:hidden"
+          }`}
+        >
           {navLinks.map((item) => (
             <li
               key={item.label}
-              className=" hover:scale-105 rounded-full hover:bg-red-50 p-4 transition-all dduration-700 ease-in-out"
+              className="hover:scale-105 rounded-full hover:bg-red-50 p-4 transition-all dduration-700 ease-in-out cursor-pointer pt-5"
             >
               <a
                 href={item.href}
@@ -46,13 +58,19 @@ const Nav = () => {
             >
               {theme === "dark" ? <BsFillSunFill /> : <BsMoonStarsFill />}
             </div>
-            <img
-              src={hamburger}
-              alt="hamburger"
-              width={25}
-              height={25}
-              className="hidden max-lg:block"
-            />
+
+            {isVisible ? (
+              <ImCross
+                alt="hamburger"
+                className="hidden max-lg:block h-9 w-9 pt-2"
+                onClick={handleButtonClick}
+              />
+            ) : (
+              <GiHamburgerMenu
+                className="hidden max-lg:block h-9 w-9"
+                onClick={handleButtonClick}
+              />
+            )}
           </div>
         </div>
       </nav>
