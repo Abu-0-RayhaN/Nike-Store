@@ -32,18 +32,18 @@ const Nav = () => {
         <ul
           className={`flex-1 flex max-lg:flex-col justify-center items-center  ${
             isVisible
-              ? "block bg-coral-red absolute top-28 left-16 w-[70%] rounded-2xl transition-all duration-1000 gap-10"
+              ? "bg-coral-red absolute top-28 left-[20%] w-[70%] rounded-2xl gap-6 py-5 flex z-10"
               : "max-lg:hidden"
           }`}
         >
           {navLinks.map((item) => (
             <li
               key={item.label}
-              className="hover:scale-105 rounded-full hover:bg-red-50 p-4 transition-all dduration-700 ease-in-out cursor-pointer pt-5"
+              className=" hover:scale-105 rounded-full hover:bg-red-50 max-lg:hover:bg-red-500 p-4 transition-all dduration-700 ease-in-out cursor-pointer pt-5"
             >
               <a
                 href={item.href}
-                className="font-montserrat leading-normal text-slate-gray text-xl"
+                className="font-montserrat leading-normal text-slate-gray text-xl max-lg:text-white "
               >
                 {item.label}
               </a>
@@ -67,7 +67,7 @@ const Nav = () => {
               />
             ) : (
               <GiHamburgerMenu
-                className="hidden max-lg:block h-9 w-9"
+                className="hidden max-lg:block h-9 w-9 pt-2"
                 onClick={handleButtonClick}
               />
             )}

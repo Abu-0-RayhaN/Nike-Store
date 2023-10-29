@@ -19,7 +19,7 @@ const Hero = () => {
         </p>
 
         <h1 className="mt-10 font-palanquin text-8xl max-sm:text-[72px] max-sm:leading-[82px] font-bold">
-          <span className="xl:bg-white dark:lg:bg-gray-800 dark:text-gray-200 xl:whitespace-nowrap relative z-10 pr-10">
+          <span className="xl:bg-white dark:lg:bg-gray-800 dark:text-gray-200 xl:whitespace-nowrap relative z-10 max-lg:z-auto pr-10">
             The New Arrival
           </span>
           <br />
