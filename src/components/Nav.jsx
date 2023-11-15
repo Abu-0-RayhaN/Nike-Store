@@ -6,7 +6,7 @@ import { BsFillSunFill, BsMoonStarsFill } from "react-icons/bs";
 import { ImCross } from "react-icons/im";
 import { GiHamburgerMenu } from "react-icons/gi";
 const Nav = () => {
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState("dark");
   const [isVisible, setIsVisible] = useState(false);
 
   const handleButtonClick = () => {
