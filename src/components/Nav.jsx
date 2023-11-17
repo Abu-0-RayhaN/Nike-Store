@@ -5,6 +5,7 @@ import { navLinks } from "../constants/index";
 import { BsFillSunFill, BsMoonStarsFill } from "react-icons/bs";
 import { ImCross } from "react-icons/im";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { Link } from "react-router-dom";
 const Nav = () => {
   const [theme, setTheme] = useState("dark");
   const [isVisible, setIsVisible] = useState(false);
@@ -41,12 +42,21 @@ const Nav = () => {
               key={item.label}
               className=" hover:scale-105 rounded-full hover:bg-red-50 max-lg:hover:bg-red-500 p-4 transition-all dduration-700 ease-in-out cursor-pointer pt-5"
             >
-              <a
-                href={item.href}
-                className="font-montserrat leading-normal text-slate-gray text-xl max-lg:text-white "
-              >
-                {item.label}
-              </a>
+              {item.label === "Products" ? (
+                <Link
+                  to="products"
+                  className="font-montserrat leading-normal text-slate-gray text-xl max-lg:text-white"
+                >
+                  {item.label}
+                </Link>
+              ) : (
+                <a
+                  href={item.href}
+                  className="font-montserrat leading-normal text-slate-gray text-xl max-lg:text-white"
+                >
+                  {item.label}
+                </a>
+              )}
             </li>
           ))}
         </ul>

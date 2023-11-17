@@ -1,44 +1,31 @@
-// import React from 'react'
-import {
-  CustomerReviews,
-  Footer,
-  Hero,
-  PopularProducts,
-  Services,
-  SpecialOffer,
-  Subscribe,
-  SuperQuality,
-} from "./sections";
+// App.js
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./Home";
 import Nav from "./components/Nav";
+import Footer from "./sections/Footer";
+import CardList from "./sections/CardList";
+
 const App = () => {
   return (
-    <main className="relative dark:bg-gray-800">
-      <Nav />
-      <section className="">
-        <Hero />
-      </section>
-      <section className="">
-        <PopularProducts />
-      </section>
-      <section className="">
-        <SuperQuality />
-      </section>
-      <section className="">
-        <Services />
-      </section>
-      <section className="">
-        <SpecialOffer />
-      </section>
-      <section className="">
-        <CustomerReviews />
-      </section>
-      <section className="">
-        <Subscribe />
-      </section>
-      <section className="">
+    <>
+      <BrowserRouter>
+        <Nav />
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <main className="relative dark:bg-gray-800">
+                <Home />
+              </main>
+            }
+          />
+          <Route path="/products" element={<CardList />} />
+          {/* Add more routes if needed */}
+        </Routes>
         <Footer />
-      </section>
-    </main>
+      </BrowserRouter>
+    </>
   );
 };
+
 export default App;
