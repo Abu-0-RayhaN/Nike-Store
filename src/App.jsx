@@ -14,32 +14,31 @@ const App = () => {
   return (
     <main className="relative dark:bg-gray-800">
       <Nav />
-      <section className="xl:padding-l wide:padding-r padding-b">
+      <section className="">
         <Hero />
       </section>
-      <section className="padding">
+      <section className="">
         <PopularProducts />
       </section>
-      <section className="padding">
+      <section className="">
         <SuperQuality />
       </section>
-      <section className="padding-x py-10">
+      <section className="">
         <Services />
       </section>
-      <section className="padding">
+      <section className="">
         <SpecialOffer />
       </section>
-      <section className="padding bg-pale-blue dark:bg-gray-600">
+      <section className="">
         <CustomerReviews />
       </section>
-      <section className="padding-x sm:py-32 py-16 w-full">
+      <section className="">
         <Subscribe />
       </section>
-      <section className="padding bg-black padding-x padding-t pb-8 text-white">
+      <section className="">
         <Footer />
       </section>
     </main>
   );
 };
-
 export default App;
