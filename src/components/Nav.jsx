@@ -40,23 +40,14 @@ const Nav = () => {
           {navLinks.map((item) => (
             <li
               key={item.label}
-              className=" hover:scale-105 rounded-full hover:bg-red-50 max-lg:hover:bg-red-500 p-4 transition-all dduration-700 ease-in-out cursor-pointer pt-5"
+              className=" hover:scale-105 rounded-full hover:bg-red-50 max-lg:hover:bg-red-500 p-4 transition-all duration-300 ease-in-out cursor-pointer pt-5"
             >
-              {item.label === "Products" ? (
-                <Link
-                  to="products"
-                  className="font-montserrat leading-normal text-slate-gray text-xl max-lg:text-white"
-                >
-                  {item.label}
-                </Link>
-              ) : (
-                <a
-                  href={item.href}
-                  className="font-montserrat leading-normal text-slate-gray text-xl max-lg:text-white"
-                >
-                  {item.label}
-                </a>
-              )}
+              <Link
+                to={item.route}
+                className="font-montserrat leading-normal text-slate-gray text-xl max-lg:text-white"
+              >
+                {item.label}
+              </Link>
             </li>
           ))}
         </ul>
