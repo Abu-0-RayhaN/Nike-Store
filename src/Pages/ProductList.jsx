@@ -1,10 +1,10 @@
 import PopularProductCard from "../components/PopularProductCard";
-import { products } from "../constants";
+import { all_products as products } from "../constants";
 const ProductList = () => {
   return (
     <>
-      <section className="padding">
-        <section id="products" className="max-container max-sm:mt-12 ">
+      <section className="padding dark:bg-gray-800">
+        <section id="products" className="max-container max-sm:mt-12 my-20">
           <div className="flex flex-col justify-center gap-5">
             <h2 className="text-4xl font-palanquin font-bold ">
               <span className="dark:text-gray-200">Our</span>{" "}
@@ -23,7 +23,6 @@ const ProductList = () => {
           </div>
         </section>
       </section>
-      ;
     </>
   );
 };

@@ -45,6 +45,9 @@ const Nav = () => {
               <Link
                 to={item.route}
                 className="font-montserrat leading-normal text-slate-gray text-xl max-lg:text-white"
+                onClick={() => {
+                  setIsVisible(false);
+                }}
               >
                 {item.label}
               </Link>
