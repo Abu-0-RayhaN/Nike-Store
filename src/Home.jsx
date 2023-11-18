@@ -12,17 +12,13 @@ const Home = () => {
     <div>
       <Hero />
       <PopularProducts />
-
       <SuperQuality />
-
       <Services />
-
       <SpecialOffer />
-
       <CustomerReviews />
-
       <Subscribe />
     </div>
   );
 };
+
 export default Home;

@@ -6,7 +6,7 @@ const AboutUs = () => {
   return (
     <div className="bg-gray-100 dark:bg-gray-800 ">
       <div className="container mx-auto py-12">
-        <div className="text-[45px] font-montserrat font-extrabold dark:text-white container mt-20 xl:pl-96 text-right px-[2%]">
+        <div className="md:text-[45px] text-[35px] font-montserrat font-extrabold dark:text-white container mt-20 xl:pl-96 text-right px-[2%]">
           We champion continual progress for athletes and sport by taking action
           to help athletes reach their potential. Every job at NIKE, Inc. is
           grounded in a team-first mindset, cultivating a culture of innovation
