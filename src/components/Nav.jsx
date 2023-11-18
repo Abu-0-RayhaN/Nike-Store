@@ -49,7 +49,9 @@ const Nav = () => {
                   setIsVisible(false);
                 }}
               >
-                {item.label}
+                <span className=" dark:hover:text-slate-gray">
+                  {item.label}
+                </span>
               </Link>
             </li>
           ))}

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-
+import { FaArrowAltCircleUp } from "react-icons/fa";
 const ScrollToTopButton = () => {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -36,7 +36,7 @@ const ScrollToTopButton = () => {
       }`}
       onClick={scrollToTop}
     >
-      Scroll to Top
+      <FaArrowAltCircleUp className="m-2" />
     </button>
   );
 };
