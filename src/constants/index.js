@@ -23,7 +23,7 @@ import {
 
 export const navLinks = [
   { label: "Home", route: "/" },
-  { label: "Products", route: "/Products" },
+  { label: "Products", route: "/products" },
   { label: "Contact Us", route: "/contactUs" },
   { label: "About Us", route: "/aboutUs" },
 ];

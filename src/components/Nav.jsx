@@ -5,7 +5,7 @@ import { navLinks } from "../constants/index";
 import { BsFillSunFill, BsMoonStarsFill } from "react-icons/bs";
 import { ImCross } from "react-icons/im";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 const Nav = () => {
   const [theme, setTheme] = useState("dark");
   const [isVisible, setIsVisible] = useState(false);
@@ -42,9 +42,17 @@ const Nav = () => {
               key={item.label}
               className=" hover:scale-105 rounded-full hover:bg-red-50 max-lg:hover:bg-red-500 p-4 transition-all duration-300 ease-in-out cursor-pointer pt-5"
             >
-              <Link
+              <NavLink
                 to={item.route}
-                className="font-montserrat leading-normal text-slate-gray text-xl max-lg:text-white"
+                className={({ isActive }) => {
+                  const additionalClasses = [
+                    isActive
+                      ? " font-extrabold font-manrope dark:text-white"
+                      : "",
+                    "font-montserrat leading-normal text-slate-gray text-xl max-lg:text-white",
+                  ];
+                  return additionalClasses.join(" ");
+                }}
                 onClick={() => {
                   setIsVisible(false);
                 }}
@@ -52,7 +60,7 @@ const Nav = () => {
                 <span className=" dark:hover:text-slate-gray">
                   {item.label}
                 </span>
-              </Link>
+              </NavLink>
             </li>
           ))}
         </ul>

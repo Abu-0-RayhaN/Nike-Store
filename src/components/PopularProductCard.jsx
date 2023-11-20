@@ -1,6 +1,7 @@
+import { Link } from "react-router-dom";
 import { arrowRight, star } from "../assets/icons";
 import Button from "./Button";
-const PopularProductCard = ({ imgURL, name, price, ListPage = false }) => {
+const PopularProductCard = ({ imgURL, name, price, ListPage = false, id }) => {
   return (
     <>
       <div
@@ -25,7 +26,13 @@ const PopularProductCard = ({ imgURL, name, price, ListPage = false }) => {
         <p className="mt-2 font-semibold font-montserrat text-2xl leading-normal text-coral-red text-center">
           {price}
         </p>
-        {ListPage ? <Button label="Details" iconURL={arrowRight} /> : <></>}
+        {ListPage ? (
+          <Link to={`/products/${id}`}>
+            <Button label="Details" iconURL={arrowRight} />
+          </Link>
+        ) : (
+          <></>
+        )}
       </div>
     </>
   );
